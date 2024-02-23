@@ -1,7 +1,7 @@
-<script setup></script>
+<script setup>
+import LandingImage from "@/components/common/LandingImage.vue"
+</script>
 
 <template>
-  <main>
-    <h1>home view</h1>
-  </main>
+  <LandingImage alt="lake" src="lake.jpg" />
 </template>

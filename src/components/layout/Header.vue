@@ -3,7 +3,7 @@ import CButton from "@/components/base/CButton.vue"
 </script>
 
 <template>
-  <div class="flex w-full justify-between items-center text-white">
+  <div class="flex flex-row w-full justify-between items-center text-white">
     <img alt="logo" src="@/assets/images/logo.svg" class="h-auto w-64 flex-shrink-0" />
     <div class="flex gap-10">
       <p>destinations</p>
