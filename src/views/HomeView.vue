@@ -1,7 +1,7 @@
 <script setup>
-import LandingImage from "@/components/common/LandingImage.vue"
+import LandingSection from "@/components/layout/LandingSection.vue"
 </script>
 
 <template>
-  <LandingImage alt="lake" src="lake.jpg" />
+  <LandingSection variant="home" alt="landing image" src="lake.jpg" />
 </template>

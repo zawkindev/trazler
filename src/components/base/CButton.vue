@@ -2,9 +2,9 @@
 const props = defineProps({
   variant: {
     type: String,
-    default: "white",
+    default: "transparent",
     validator(value) {
-      return ["white", "black"].includes(value)
+      return ["white", "black", "transparent"].includes(value)
     }
   },
   type: String,
@@ -15,7 +15,7 @@ const props = defineProps({
 function getClasses() {
   switch (props.variant) {
     case "white":
-      return "bg-whtie text-black"
+      return "bg-white text-black"
     case "black":
       return "bg-black text-white"
   }

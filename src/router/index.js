@@ -5,6 +5,10 @@ const routes = [
     path: "/",
     name: "Home",
     component: () => import("@/views/HomeView.vue")
+  },
+  {
+    path: "/p",
+    component: () => import("@/playGround/PlayGround.vue")
   }
 ]
 

@@ -1,17 +1,16 @@
 <script setup>
 import CButton from "@/components/base/CButton.vue"
+
+const headerData = ["destinations", "food", "well being", "sport", "family", "lifestyle"]
 </script>
 
 <template>
   <div class="flex flex-row w-full justify-between items-center text-white">
     <img alt="logo" src="@/assets/images/logo.svg" class="h-auto w-64 flex-shrink-0" />
     <div class="flex gap-10">
-      <p>destinations</p>
-      <p>food</p>
-      <p>well being</p>
-      <p>sport</p>
-      <p>family</p>
-      <p>lifestyle</p>
+      <p v-for="item in headerData" :key="item" class="uppercase hover:cursor-pointer">
+        {{ item }}
+      </p>
     </div>
     <div class="flex">
       <CButton>
@@ -19,17 +18,8 @@ import CButton from "@/components/base/CButton.vue"
       </CButton>
 
       <CButton variant="black">
-        <p>get your $120 navruz gift</p>
+        <p class="uppercase">get your $120 navruz gift</p>
       </CButton>
     </div>
   </div>
 </template>
-
-<style>
-p {
-  text-transform: uppercase;
-}
-p:hover {
-  cursor: pointer;
-}
-</style>

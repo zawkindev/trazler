@@ -1,12 +1,12 @@
 <script setup>
-import CButton from "@/components/base/CButton.vue"
 import Header from "@/components/layout/Header.vue"
+import Breadcrumb from "@/components/common/Breadcrumb.vue"
 </script>
 
 <template>
   <div class="p-10 bg-gray-500">
     <Header> </Header>
 
-    <CButton variant="dark"> salom </CButton>
+    <Breadcrumb :data="['salom','xayr']" />
   </div>
 </template>
