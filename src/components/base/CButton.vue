@@ -1,4 +1,6 @@
 <script setup>
+import { computed } from "vue"
+
 const props = defineProps({
   variant: {
     type: String,
@@ -12,22 +14,24 @@ const props = defineProps({
   class: String
 })
 
-function getClasses() {
+const classes = computed(() => {
   switch (props.variant) {
     case "white":
-      return "bg-white text-black"
+      return "bg-white text-black";
     case "black":
-      return "bg-black text-white"
+      return "bg-black text-white";
+    default:
+      return "";
   }
-}
+});
 </script>
 
 <template>
   <button
     :type="type"
     :disabled="disabled"
-    :class="getClasses()"
-    class="flex items-center justify-center px-6 py-2 rounded-sm"
+    :class="classes"
+    class="flex items-center justify-center px-8 py-3 rounded-sm"
   >
     <slot />
   </button>

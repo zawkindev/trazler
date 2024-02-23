@@ -17,7 +17,7 @@ defineProps({
   <img
     alt="background image"
     :src="getImgUrl(src)"
-    class="absolute -z-20 min-w-[100vw] h-full top-0 left-0 object-cover"
+    class="absolute -z-20 min-w-[100vw] h-[700px] top-0 left-0 object-cover"
   />
-  <div class="bg-black flex absolute top-0 left-0 -z-10 w-screen h-full opacity-50"></div>
+  <div class="bg-black flex absolute top-0 left-0 -z-10 w-screen h-[700px] opacity-40" />
 </template>

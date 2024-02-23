@@ -18,7 +18,7 @@ const headerData = ["destinations", "food", "well being", "sport", "family", "li
       </CButton>
 
       <CButton variant="black">
-        <p class="uppercase">get your $120 navruz gift</p>
+        <p class="uppercase font-semibold text-sm">get your $120 navruz gift</p>
       </CButton>
     </div>
   </div>
