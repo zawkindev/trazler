@@ -1,6 +1,6 @@
 <script setup>
 import CButton from "@/components/base/CButton.vue"
-import LandingImage from "@/components/common/CoverImage.vue"
+import CoverImage from "@/components/common/CoverImage.vue"
 import Header from "@/components/layout/Header.vue"
 
 defineProps({
@@ -23,8 +23,8 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col gap-10 h-[700px]  text-white">
-    <LandingImage :alt="alt" :src="src" />
+  <div class="flex flex-col gap-10 h-[700px]  text-white overflow-hidden">
+    <CoverImage :alt="alt" :src="src" />
     <Header />
     <div class="flex flex-col justify-center items-center h-full gap-10">
       <div class="text-center">
