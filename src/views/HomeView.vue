@@ -27,7 +27,7 @@ const socialMediaData = [
 </script>
 
 <template>
-  <div class="flex flex-col gap-8 py-6 px-24 overflow-x-hidden">
+  <div class="flex flex-col gap-8 py-6 px-24">
     <LandingSection variant="home" alt="landing image" src="lake.jpg" />
     <div class="flex w-full justify-end">
       <SocialGroup variant="row" :data="socialMediaData" />
