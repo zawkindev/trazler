@@ -2,6 +2,8 @@
 import LandingSection from "@/components/layout/LandingSection.vue"
 import SocialGroup from "@/components/common/SocialGroup.vue"
 import Card from "@/components/common/Card.vue"
+import CButton from "@/components/base/CButton.vue"
+import Banner from "@/components/layout/Banner.vue"
 
 const socialMediaData = [
   {
@@ -45,5 +47,11 @@ const socialMediaData = [
         title="Integer Maecans Eget Viverra"
       />
     </div>
+    <div class="flex w-full items-center justify-center my-28">
+      <CButton variant="outline">
+        <span class="font-semibold mx-8"> Load more </span>
+      </CButton>
+    </div>
+    <Banner src="sea-xl.png" />
   </div>
 </template>

@@ -6,7 +6,7 @@ const props = defineProps({
     type: String,
     default: "transparent",
     validator(value) {
-      return ["white", "black", "transparent"].includes(value)
+      return ["white", "black", "outline", "transparent"].includes(value)
     }
   },
   type: String,
@@ -17,13 +17,16 @@ const props = defineProps({
 const classes = computed(() => {
   switch (props.variant) {
     case "white":
-      return "bg-white text-black";
+      return "bg-white text-black"
     case "black":
-      return "bg-black text-white";
+      return "bg-black text-white"
+
+    case "outline":
+      return "bg-white border-2 rounded-sm border-gray-800 text-gray-800"
     default:
-      return "";
+      return ""
   }
-});
+})
 </script>
 
 <template>
