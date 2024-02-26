@@ -55,14 +55,14 @@ defineProps({
 
 <template>
   <div
-    class="flex flex-col gap-4 w-[330px] border-box text-gray-600"
+    class="flex flex-col gap-4 w-[330px] border-box text-gray-500"
   >
     <div class="relative flex w-full h-[200px]">
       <img :src="getImgUrl(src)" class="w-full h-full" />
       <div class="absolute flex w-full justify-between items-center p-4">
         <div class="flex gap-2">
           <Badge v-for="(item, index) in textBadges" :key="index">
-            <p class="capitalize">{{ item }}</p></Badge
+            <p class="capitalize font-semibold">{{ item }}</p></Badge
           >
         </div>
         <Badge has-icon>
