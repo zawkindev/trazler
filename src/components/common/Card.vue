@@ -54,16 +54,19 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 w-[330px] border-box text-gray-500 mt-20">
+  <div class="flex flex-col gap-4 w-[325px] border-box text-gray-500 mt-20">
     <div class="relative flex w-full h-[250px]">
-      <img :src="getImgUrl(src)" class="w-full h-full" />
-      <div class="absolute flex w-full justify-between items-center p-4">
-        <div class="flex gap-2">
+      <div class="relative flex w-full h-full">
+        <img :src="getImgUrl(src)" class="w-full h-full" />
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+      </div>
+      <div class="absolute flex w-full justify-between p-4">
+        <div class="flex gap-2 h-fit absolute z-50">
           <Badge v-for="(item, index) in textBadges" :key="index">
             <p class="capitalize font-semibold">{{ item }}</p></Badge
           >
         </div>
-        <Badge has-icon>
+        <Badge class="h-fit" has-icon>
           <img :alt="imgBagde.alt" :src="getImgUrl(imgBagde.src)" class="w-4 h-4" />
         </Badge>
       </div>
