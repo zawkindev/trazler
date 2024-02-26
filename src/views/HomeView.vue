@@ -28,9 +28,9 @@ const socialMediaData = [
 </script>
 
 <template>
-  <div class="flex flex-col gap-6 py-6 px-24">
+  <div class="flex flex-col py-6 px-24">
     <LandingSection variant="home" alt="landing image" src="lake.jpg" />
-    <div class="flex w-full justify-end">
+    <div class="flex w-full justify-end mt-6">
       <SocialGroup variant="row" :data="socialMediaData" />
     </div>
     <div class="flex flex-wrap gap-8">

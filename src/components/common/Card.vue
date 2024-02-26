@@ -54,7 +54,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 w-[325px] border-box text-gray-500 mt-20">
+  <div class="flex flex-col gap-4 w-[325px] border-box text-gray-500 mt-6">
     <div class="relative flex w-full h-[250px]">
       <div class="relative flex w-full h-full">
         <img :src="getImgUrl(src)" class="w-full h-full" />

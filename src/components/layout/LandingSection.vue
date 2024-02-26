@@ -23,7 +23,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col gap-10 h-[700px]  text-white">
+  <div class="flex flex-col h-[680px]  text-white">
     <CoverImage :alt="alt" :src="src" />
     <Header />
     <div class="flex flex-col justify-center items-center h-full gap-10">
