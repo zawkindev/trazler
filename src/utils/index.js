@@ -14,3 +14,28 @@ export function generateBreadcrumbData(items) {
 
   return array
 }
+
+export function formatDate(date) {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+  ]
+
+  const month = months[date.getMonth()]
+  const day = date.getDate()
+  const year = date.getFullYear()
+
+  const formattedDate = `${month} ${day}, ${year}`
+
+  return formattedDate
+}
