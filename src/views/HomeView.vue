@@ -47,7 +47,7 @@ const socialMediaData = [
         title="Integer Maecans Eget Viverra"
       />
     </div>
-    <div class="flex w-full items-center justify-center my-28">
+    <div class="flex w-full items-center justify-center">
       <CButton variant="outline">
         <span class="font-semibold mx-8"> Load more </span>
       </CButton>
