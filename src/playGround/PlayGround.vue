@@ -15,6 +15,17 @@ import Card from "@/components/common/Card.vue"
     <Badge has-icon>
       <img class="h-auto w-4" src="@/assets/images/icons/gallery.svg" />
     </Badge>
-    <Card src="lake.jpg" title="Integer Maecans Eget Viverra" share-count="130M" />
+    <div class="flex flex-wrap gap-8">
+      <Card
+        v-for="index in 8"
+        :key="index"
+        :img-bagde="{
+          alt: index % 2 == 1 ? 'gallery' : 'play',
+          src: `icons/${index % 2 == 1 ? 'gallery' : 'play'}.svg`
+        }"
+        :src="`posts/${index}.png`"
+        title="Integer Maecans Eget Viverra"
+      />
+    </div>
   </div>
 </template>

@@ -37,11 +37,11 @@ defineProps({
     default: () => new Date("2006-04-22")
   },
   shareCount: {
-    required: true,
     type: String,
-     validator(value) {
+    default: () => "111K",
+    validator(value) {
       return value.length <= 4
-     }
+    }
   },
   description: {
     type: String,
@@ -54,10 +54,8 @@ defineProps({
 </script>
 
 <template>
-  <div
-    class="flex flex-col gap-4 w-[330px] border-box text-gray-500"
-  >
-    <div class="relative flex w-full h-[200px]">
+  <div class="flex flex-col gap-4 w-[330px] border-box text-gray-500 mt-20">
+    <div class="relative flex w-full h-[250px]">
       <img :src="getImgUrl(src)" class="w-full h-full" />
       <div class="absolute flex w-full justify-between items-center p-4">
         <div class="flex gap-2">
@@ -66,7 +64,7 @@ defineProps({
           >
         </div>
         <Badge has-icon>
-          <img :alt="imgBagde.alt" :src="getImgUrl(imgBagde.src)" />
+          <img :alt="imgBagde.alt" :src="getImgUrl(imgBagde.src)" class="w-4 h-4" />
         </Badge>
       </div>
     </div>

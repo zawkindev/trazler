@@ -1,6 +1,7 @@
 <script setup>
 import LandingSection from "@/components/layout/LandingSection.vue"
 import SocialGroup from "@/components/common/SocialGroup.vue"
+import Card from "@/components/common/Card.vue"
 
 const socialMediaData = [
   {
@@ -31,6 +32,18 @@ const socialMediaData = [
     <LandingSection variant="home" alt="landing image" src="lake.jpg" />
     <div class="flex w-full justify-end">
       <SocialGroup variant="row" :data="socialMediaData" />
+    </div>
+    <div class="flex flex-wrap gap-8">
+      <Card
+        v-for="index in 8"
+        :key="index"
+        :img-bagde="{
+          alt: index % 2 == 1 ? 'gallery' : 'play',
+          src: `icons/${index % 2 == 1 ? 'gallery' : 'play'}.svg`
+        }"
+        :src="`posts/${index}.png`"
+        title="Integer Maecans Eget Viverra"
+      />
     </div>
   </div>
 </template>
