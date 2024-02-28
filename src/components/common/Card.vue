@@ -61,7 +61,7 @@ defineProps({
         <div class="absolute inset-0 bg-black opacity-20"></div>
       </div>
       <div class="absolute flex w-full justify-between p-4">
-        <div class="flex gap-2 h-fit absolute z-50">
+        <div class="flex gap-2 h-fit">
           <Badge v-for="(item, index) in textBadges" :key="index">
             <p class="capitalize font-semibold">{{ item }}</p></Badge
           >
