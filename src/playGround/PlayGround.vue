@@ -3,7 +3,17 @@ import Header from "@/components/layout/Header.vue"
 import Breadcrumb from "@/components/common/Breadcrumb.vue"
 import Badge from "@/components/common/Badge.vue"
 import Card from "@/components/common/Card.vue"
+import Tab from "@/components/common/Tab.vue"
 import DestinationCard from "@/components/common/DestinationCard.vue"
+
+const options = [
+  "Category name",
+  "Category name",
+  "Category name",
+  "Category name",
+  "Category name",
+  "Category name",
+]
 </script>
 
 <template>
@@ -29,6 +39,8 @@ import DestinationCard from "@/components/common/DestinationCard.vue"
       />
     </div>
   </div>
+
+  <Tab :options="options" :active-tab="1" />
   <div class="flex flex-col gap-4">
     <h4 class="text-3xl font-bold">Top Destinations</h4>
     <p class="font-bold text-lg">

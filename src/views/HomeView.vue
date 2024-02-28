@@ -1,10 +1,12 @@
 <script setup>
+import { ref } from "vue"
 import LandingSection from "@/components/layout/LandingSection.vue"
 import SocialGroup from "@/components/common/SocialGroup.vue"
 import Card from "@/components/common/Card.vue"
 import CButton from "@/components/base/CButton.vue"
 import Banner from "@/components/layout/Banner.vue"
 import DestinationCard from "@/components/common/DestinationCard.vue"
+import Tab from "@/components/common/Tab.vue"
 
 const socialMediaData = [
   {
@@ -28,6 +30,17 @@ const socialMediaData = [
     alt: "youtube"
   }
 ]
+
+const options = [
+  "Category name",
+  "Category name",
+  "Category name",
+  "Category name",
+  "Category name",
+  "Category name"
+]
+
+const activeTab = ref(0)
 </script>
 
 <template>
@@ -36,7 +49,7 @@ const socialMediaData = [
     <div class="flex w-full justify-end mt-6">
       <SocialGroup variant="row" :data="socialMediaData" />
     </div>
-    <div class="flex flex-col gap-20">
+    <div class="flex flex-col gap-28">
       <div class="flex flex-wrap gap-8">
         <Card
           v-for="index in 8"
@@ -73,6 +86,7 @@ const socialMediaData = [
           />
         </div>
       </div>
+      <Tab @select-tab="(index) => (activeTab = index)" :options="options" :active-tab="activeTab" />
     </div>
   </div>
 </template>
