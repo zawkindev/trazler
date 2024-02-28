@@ -55,12 +55,14 @@ const socialMediaData = [
         </CButton>
       </div>
       <Banner src="sea-xl.png" />
-      <div class="flex flex-col gap-4">
-        <h4 class="text-3xl font-bold">Top Destinations</h4>
-        <p class="font-bold text-lg">
-          Tick one more destination off of your bucket list with one of our most popular vacations
-          in 2024.
-        </p>
+      <div class="flex flex-col gap-8">
+        <div>
+          <h4 class="text-3xl font-bold">Top Destinations</h4>
+          <p class="font-bold text-lg">
+            Tick one more destination off of your bucket list with one of our most popular vacations
+            in 2024.
+          </p>
+        </div>
         <div class="flex justify-between gap-6">
           <DestinationCard
             v-for="index in 5"
