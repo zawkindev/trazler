@@ -86,7 +86,27 @@ const activeTab = ref(0)
           />
         </div>
       </div>
-      <Tab @select-tab="(index) => (activeTab = index)" :options="options" :active-tab="activeTab" />
+      <Tab
+        @select-tab="(index) => (activeTab = index)"
+        :options="options"
+        :active-tab="activeTab"
+      />
+      <div class="flex justify-between items-center">
+        <div class="flex p-6 border-2 border-gray-300">
+          <div class="flex flex-col gap-8 w-7/12 text-gray-500 font-semibold">
+            <img class="h-auto w-full object-fill" alt="cho'l" src="@/assets/images/categories/3.png" />
+            <p>1 Month ago</p>
+            <h5 class="text-2xl font-bold text-black">
+              Tick one more destination off of your bucket list with one of our most popular
+              vacations in 2024.
+            </h5>
+            <p class="text-md">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptas placeat
+              architecto magnam laborum ipsum, amet facilis magni?
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
