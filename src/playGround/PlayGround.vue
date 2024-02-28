@@ -3,6 +3,7 @@ import Header from "@/components/layout/Header.vue"
 import Breadcrumb from "@/components/common/Breadcrumb.vue"
 import Badge from "@/components/common/Badge.vue"
 import Card from "@/components/common/Card.vue"
+import DestinationCard from "@/components/common/DestinationCard.vue"
 </script>
 
 <template>
@@ -25,6 +26,22 @@ import Card from "@/components/common/Card.vue"
         }"
         :src="`posts/${index}.png`"
         title="Integer Maecans Eget Viverra"
+      />
+    </div>
+  </div>
+  <div class="flex flex-col gap-4">
+    <h4 class="text-3xl font-bold">Top Destinations</h4>
+    <p class="font-bold text-lg">
+      pick one more destination off of your bucket list with one of our most popular vacations in
+      2024.
+    </p>
+    <div class="flex justify-between gap-6">
+      <DestinationCard
+        v-for="index in 5"
+        :key="index"
+        alt="domicano"
+        :src="`destinations/${index}.png`"
+        title="Domican Republic"
       />
     </div>
   </div>

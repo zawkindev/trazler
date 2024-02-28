@@ -4,6 +4,7 @@ import SocialGroup from "@/components/common/SocialGroup.vue"
 import Card from "@/components/common/Card.vue"
 import CButton from "@/components/base/CButton.vue"
 import Banner from "@/components/layout/Banner.vue"
+import DestinationCard from "@/components/common/DestinationCard.vue"
 
 const socialMediaData = [
   {
@@ -35,23 +36,41 @@ const socialMediaData = [
     <div class="flex w-full justify-end mt-6">
       <SocialGroup variant="row" :data="socialMediaData" />
     </div>
-    <div class="flex flex-wrap gap-8">
-      <Card
-        v-for="index in 8"
-        :key="index"
-        :img-bagde="{
-          alt: index % 2 == 1 ? 'gallery' : 'play',
-          src: `icons/${index % 2 == 1 ? 'gallery' : 'play'}.svg`
-        }"
-        :src="`posts/${index}.png`"
-        title="Integer Maecans Eget Viverra"
-      />
+    <div class="flex flex-col gap-20">
+      <div class="flex flex-wrap gap-8">
+        <Card
+          v-for="index in 8"
+          :key="index"
+          :img-bagde="{
+            alt: index % 2 == 1 ? 'gallery' : 'play',
+            src: `icons/${index % 2 == 1 ? 'gallery' : 'play'}.svg`
+          }"
+          :src="`posts/${index}.png`"
+          title="Integer Maecans Eget Viverra"
+        />
+      </div>
+      <div class="flex w-full items-center justify-center">
+        <CButton variant="outline">
+          <span class="font-semibold mx-8"> Load more </span>
+        </CButton>
+      </div>
+      <Banner src="sea-xl.png" />
+      <div class="flex flex-col gap-4">
+        <h4 class="text-3xl font-bold">Top Destinations</h4>
+        <p class="font-bold text-lg">
+          Tick one more destination off of your bucket list with one of our most popular vacations
+          in 2024.
+        </p>
+        <div class="flex justify-between gap-6">
+          <DestinationCard
+            v-for="index in 5"
+            :key="index"
+            alt="domicano"
+            :src="`destinations/${index}.png`"
+            title="Domican Republic"
+          />
+        </div>
+      </div>
     </div>
-    <div class="flex w-full items-center justify-center">
-      <CButton variant="outline">
-        <span class="font-semibold mx-8"> Load more </span>
-      </CButton>
-    </div>
-    <Banner src="sea-xl.png" />
   </div>
 </template>
