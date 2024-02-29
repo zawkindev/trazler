@@ -13,19 +13,23 @@ import Footer from "@/components/layout/Footer.vue"
 const socialMediaData = [
   {
     stats: "3.7 M",
-    alt: "facebook"
+    alt: "facebook",
+    url: "https://facebook.com"
   },
   {
     stats: "2.4 M",
-    alt: "instagram"
+    alt: "instagram",
+    url: "https://instagram.com"
   },
   {
     stats: "3.7 M",
-    alt: "twitter"
+    alt: "twitter",
+    url: "https://x.com"
   },
   {
     stats: "2.4 M",
-    alt: "youtube"
+    alt: "youtube",
+    url: "https://youtube.com"
   }
 ]
 
