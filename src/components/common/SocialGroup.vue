@@ -2,11 +2,18 @@
 import { getImgUrl } from "@/utils/index"
 
 defineProps({
-  variant: {
+  direction: {
     required: true,
     type: String,
     validator(value) {
       return ["row", "col"].includes(value)
+    }
+  },
+  theme: {
+    required: true,
+    type: String,
+    validator(value) {
+      return ["light", "dark"].includes(value)
     }
   },
   data: {
@@ -21,10 +28,14 @@ defineProps({
     <div
       v-for="item in data"
       :key="item"
-      :class="`flex flex-${variant} gap-1 items-center justify-center`"
+      :class="`flex flex-${direction} gap-1 items-center justify-center`"
     >
-      <img :alt="item.alt" :src="getImgUrl(item.src)" class="h-auto w-6" />
-      <p class="whitespace-nowrap">{{ item.stats }}</p>
+      <img
+        :alt="item.alt"
+        :src="getImgUrl(`icons/social/${theme}/${item?.alt}.svg`)"
+        class="h-auto w-6"
+      />
+      <p class="whitespace-nowrap font-bold" :class="{'text-gray-300':theme=='dark'}">{{ item.stats }}</p>
     </div>
   </div>
 </template>

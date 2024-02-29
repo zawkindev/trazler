@@ -8,26 +8,23 @@ import CButton from "@/components/base/CButton.vue"
 import Banner from "@/components/layout/Banner.vue"
 import DestinationCard from "@/components/common/DestinationCard.vue"
 import Tab from "@/components/common/Tab.vue"
+import Footer from "@/components/layout/Footer.vue"
 
 const socialMediaData = [
   {
     stats: "3.7 M",
-    src: "icons/facebook-dark.svg",
     alt: "facebook"
   },
   {
     stats: "2.4 M",
-    src: "icons/intagram-dark.svg",
     alt: "instagram"
   },
   {
     stats: "3.7 M",
-    src: "icons/twitter-dark.svg",
     alt: "twitter"
   },
   {
     stats: "2.4 M",
-    src: "icons/youtube-dark.svg",
     alt: "youtube"
   }
 ]
@@ -48,7 +45,7 @@ const activeTab = ref(0)
   <div class="flex flex-col py-6 px-24">
     <LandingSection variant="home" alt="landing image" src="lake.jpg" />
     <div class="flex w-full justify-end mt-6">
-      <SocialGroup variant="row" :data="socialMediaData" />
+      <SocialGroup direction="row" theme="light" :data="socialMediaData" />
     </div>
     <div class="flex flex-col gap-28">
       <div class="flex flex-wrap gap-8">
@@ -140,4 +137,5 @@ const activeTab = ref(0)
       </div>
     </div>
   </div>
+  <Footer />
 </template>

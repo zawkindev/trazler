@@ -1,5 +1,6 @@
 <script setup>
 import Header from "@/components/layout/Header.vue"
+import Footer from "@/components/layout/Footer.vue"
 import Breadcrumb from "@/components/common/Breadcrumb.vue"
 import Badge from "@/components/common/Badge.vue"
 import Card from "@/components/common/Card.vue"
@@ -12,7 +13,7 @@ const options = [
   "Category name",
   "Category name",
   "Category name",
-  "Category name",
+  "Category name"
 ]
 </script>
 
@@ -57,4 +58,5 @@ const options = [
       />
     </div>
   </div>
+  <Footer />
 </template>
