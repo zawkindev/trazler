@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue"
+import { formatDate, getImgUrl } from "@/utils/index"
 import LandingSection from "@/components/layout/LandingSection.vue"
 import SocialGroup from "@/components/common/SocialGroup.vue"
 import Card from "@/components/common/Card.vue"
@@ -91,10 +92,14 @@ const activeTab = ref(0)
         :options="options"
         :active-tab="activeTab"
       />
-      <div class="flex justify-between items-center">
-        <div class="flex p-6 border-2 border-gray-300">
-          <div class="flex flex-col gap-8 w-7/12 text-gray-500 font-semibold">
-            <img class="h-auto w-full object-fill" alt="cho'l" src="@/assets/images/categories/3.png" />
+      <div class="flex justify-between items-center gap-10">
+        <div class="flex p-6 border-2 border-gray-300 gap-8 w-7/12">
+          <div class="flex flex-col gap-5 w-7/12 text-gray-500 font-semibold">
+            <img
+              class="h-auto w-full object-fill"
+              alt="cho'l"
+              src="@/assets/images/categories/8.png"
+            />
             <p>1 Month ago</p>
             <h5 class="text-2xl font-bold text-black">
               Tick one more destination off of your bucket list with one of our most popular
@@ -104,6 +109,32 @@ const activeTab = ref(0)
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptas placeat
               architecto magnam laborum ipsum, amet facilis magni?
             </p>
+          </div>
+          <div class="w-5/12 h-full flex flex-col gap-4">
+            <div v-for="index in 4" class="flex gap-4" :key="index">
+              <img alt="photo" :src="getImgUrl(`categories/${index}.png`)" class="max-w-60 h-32" />
+              <div class="flex flex-col gap-4">
+                <p class="font-bold text-xl text-wrap flex">Akame Ga Kill: Season finale</p>
+                <span>
+                  {{ formatDate(new Date("02-02-2024")) }}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col px-8 py-5 gap-5 border-2 border-gray-300 w-5/12 h-full justify-between">
+          <h5 class="font-bold text-xl">Manga reads</h5>
+          <div v-for="index in 3" class="flex gap-4" :key="index">
+            <img class="max-w-80 h-40" alt="friends" :src="getImgUrl(`categories/${index+4}.png`)" />
+            <div class="flex flex-col gap-4">
+              <p class="font-bold text-xl">
+                Tick one more destination off of your bucket list with one of our most popular
+                vacations in 2024.
+              </p>
+              <p>
+                {{ formatDate(new Date("04-22-2006")) }}
+              </p>
+            </div>
           </div>
         </div>
       </div>
