@@ -17,12 +17,12 @@ const props = defineProps({
 const classes = computed(() => {
   switch (props.variant) {
     case "white":
-      return "bg-white text-black"
+      return "bg-white text-black  hover:bg-gray-200"
     case "black":
-      return "bg-black text-white"
+      return "bg-black text-white hover:bg-gray-900"
 
     case "outline":
-      return "bg-white border-2 rounded-sm border-gray-800 text-gray-800"
+      return "bg-white border-2 rounded-sm border-gray-800 text-gray-800 hover:bg-gray-100"
     default:
       return ""
   }

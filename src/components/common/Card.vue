@@ -1,4 +1,3 @@
-<!-- eslint-disable no-unused-label -->
 <script setup>
 import { formatDate, getImgUrl } from "@/utils/index"
 import Separator from "@/components/common/Separator.vue"
@@ -65,8 +64,8 @@ defineProps({
           <Badge v-for="(item, index) in textBadges" :key="index">
             <p class="capitalize font-semibold">{{ item }}</p></Badge
           >
-        </div>
-        <Badge class="h-fit" has-icon>
+        </div> 
+        <Badge class="h-fit cursor-pointer" has-icon>
           <img :alt="imgBagde.alt" :src="getImgUrl(imgBagde.src)" class="w-4 h-4" />
         </Badge>
       </div>

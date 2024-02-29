@@ -6,9 +6,9 @@ const headerData = ["destinations", "food", "well being", "sport", "family", "li
 
 <template>
   <div class="flex flex-row w-full justify-between items-center text-white">
-    <img alt="logo" src="@/assets/images/logo.svg" class="h-auto w-64 flex-shrink-0" />
+    <img alt="logo" src="@/assets/images/logo.svg" class="h-auto w-96 flex-shrink-0" />
     <div class="flex gap-10">
-      <p v-for="item in headerData" :key="item" class="uppercase hover:cursor-pointer">
+      <p v-for="item in headerData" :key="item" class="uppercase hover:cursor-pointer text-xl">
         {{ item }}
       </p>
     </div>

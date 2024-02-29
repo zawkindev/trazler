@@ -33,7 +33,7 @@ defineProps({
       <img
         :alt="item.alt"
         :src="getImgUrl(`icons/social/${theme}/${item?.alt}.svg`)"
-        class="h-auto w-6"
+        class="h-auto w-6  cursor-pointer"
       />
       <p class="whitespace-nowrap font-bold" :class="{'text-gray-300':theme=='dark'}">{{ item.stats }}</p>
     </div>

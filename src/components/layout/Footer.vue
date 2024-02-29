@@ -21,7 +21,7 @@ const socialMediaData = [
 </script>
 <template>
   <div class="flex justify-between w-full p-16 bg-black text-white">
-    <p>Designed & Developed by <span class="font-bold uppercase">Megumi Katou</span></p>
+    <p class="text-xl">Designed & Developed by <span class="font-bold text-xl uppercase">Megumi Katou</span></p>
     <SocialGroup direction="col" theme="dark" :data="socialMediaData" />
   </div>
 </template>
