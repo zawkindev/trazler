@@ -2,6 +2,7 @@
 import CButton from "@/components/base/CButton.vue"
 import CoverImage from "@/components/common/CoverImage.vue"
 import Header from "@/components/layout/Header.vue"
+import { ref } from "vue"
 
 defineProps({
   variant: {
@@ -20,12 +21,20 @@ defineProps({
     type: String
   }
 })
+
+const menuOpen = ref(true)
+
+function closeMenu(e) {
+  if (!e.target.closest(".menu")) {
+    menuOpen.value = false
+  }
+}
 </script>
 
 <template>
-  <div class="flex flex-col h-[680px] text-white">
+  <div class="flex flex-col h-[680px] text-white" @click="closeMenu">
     <CoverImage :alt="alt" :src="src" />
-    <Header />
+    <Header :menu-open="menuOpen" @toggle="(bool) => (menuOpen = bool)"  />
     <div class="flex flex-col justify-center items-center h-full gap-10">
       <div class="text-center">
         <h1 class="text-5xl font-bold uppercase">Inpiration for travel by real people</h1>

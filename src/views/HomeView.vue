@@ -10,6 +10,7 @@ import DestinationCard from "@/components/common/DestinationCard.vue"
 import Tab from "@/components/common/Tab.vue"
 import Footer from "@/components/layout/Footer.vue"
 
+
 const socialMediaData = [
   {
     stats: "3.7 M",
@@ -46,13 +47,13 @@ const activeTab = ref(0)
 </script>
 
 <template>
-  <div class="flex flex-col py-6 px-24">
+  <div class="flex flex-col py-6 px-4 sm:px-24">
     <LandingSection variant="home" alt="landing image" src="lake.jpg" />
     <div class="flex w-full justify-end mt-6">
       <SocialGroup direction="row" theme="light" :data="socialMediaData" />
     </div>
     <div class="flex flex-col gap-28">
-      <div class="flex flex-wrap gap-8">
+      <div class="flex flex-wrap gap-8 justify-end">
         <Card
           v-for="index in 8"
           :key="index"
@@ -62,6 +63,7 @@ const activeTab = ref(0)
           }"
           :src="`posts/${index}.png`"
           title="Integer Maecans Eget Viverra"
+          class="mx-auto"
         />
       </div>
       <div class="flex w-full items-center justify-center">
